@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main() {
+    double angle1 = 60.0;
+    double angle2 = 80.0;
+
+    try {
+        double thirdAngle = calculateThirdAngle(angle1, angle2);
+        std::cout << "Третій кут: " << thirdAngle << " градусів" << std::endl;
+    } catch (const std::invalid_argument& e) {
+        std::cerr << "Помилка: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
