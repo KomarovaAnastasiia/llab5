@@ -1,0 +1,12 @@
+#include <stdexcept>
+
+// Функція для обчислення третього кута трикутника
+double calculateThirdAngle(double angle1, double angle2) {
+    // Перевірка коректності введених кутів
+    if (angle1 <= 0 || angle2 <= 0 || angle1 + angle2 >= 180) {
+        throw std::invalid_argument("Кути повинні бути додатніми і їх сума повинна бути меншою за 180.");
+    }
+    
+    // Обчислення третього кута
+    return 180.0 - angle1 - angle2;
+}
